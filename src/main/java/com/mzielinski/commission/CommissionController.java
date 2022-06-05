@@ -14,6 +14,9 @@ import java.text.NumberFormat;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
+/**
+ * TODO... This Class is a nightmare... it is not my code, I will try to rewrite it to more readable code.
+ */
 public class CommissionController implements Initializable {
 
     private static final double PROWIZJA = 0.0028;
