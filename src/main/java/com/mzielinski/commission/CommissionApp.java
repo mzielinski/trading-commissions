@@ -11,6 +11,8 @@ import static javafx.fxml.FXMLLoader.load;
 
 public class CommissionApp extends Application {
 
+    private static final String TITLE = "Konrad 1.0 - prowizja 0,28%";
+
     private static final double WIDTH = 800.0;
     private static final double HEIGHT = 600.0;
 
@@ -19,14 +21,15 @@ public class CommissionApp extends Application {
     private static final URL css = requireNonNull(CommissionApp.class.getClassLoader()
             .getResource("application.css"), "Cannot find application.fxml file");
 
-    public void start(Stage primaryStage) {
+    @Override
+    public void start(Stage main) {
         try {
             Scene scene = new Scene(load(fxml), WIDTH, HEIGHT);
             scene.getStylesheets().add(css.toExternalForm());
-            primaryStage.setScene(scene);
-            primaryStage.show();
-            primaryStage.setResizable(true);
-            primaryStage.setTitle("Konrad 1.0 - prowizja 0,28%");
+            main.setScene(scene);
+            main.show();
+            main.setResizable(true);
+            main.setTitle(TITLE);
         } catch (Exception exception) {
             exception.printStackTrace();
         }
